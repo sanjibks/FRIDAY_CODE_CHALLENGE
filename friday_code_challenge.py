@@ -15,6 +15,7 @@ def address_split(address):
     """
 
     """defining an empty dictionary to store the street and housenumber"""
+      
     street_house={"street":'',"housenumber":''}
     
 
@@ -26,6 +27,7 @@ def address_split(address):
     if ',' in address:
 
         """trying to satisfy the 3(iv) case in the "if" clause and "else" clause is for other cases"""
+         
         if sum([int(any(map(str.isdigit, i))) for i in address.split()]) > 1:
             array_address=[val.strip() for val in address.split(',')]
             array_address.reverse()
@@ -61,6 +63,8 @@ def address_split(address):
 
     return address_split(address_new)
 
+
+"""Unit testing sample cases"""
 
 if __name__ == "__main__":
     address="Calle 39 No 1540"
